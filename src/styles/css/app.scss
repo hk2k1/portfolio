@@ -1,0 +1,77 @@
+@use './queries.scss' as *;
+@use './colours.scss' as *;
+@use './animation.module.scss' as *;
+// :root {
+//     --base: 24px;
+//     --font-body: system-ui;
+
+
+//     --gutter-h: 180px;
+//     --block-padding: 120px;
+
+//     @include large-break {
+//         --gutter-h: 144px;
+//         --block-padding: 96px;
+//     }
+
+//     @include mid-break {
+//         --gutter-h: 24px;
+//         --block-padding: 60px;
+//     }
+// }
+
+@mixin animate-appear{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+    position: absolute;
+}
+
+.container-main {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--color-main-bg);
+    justify-content: center;
+}
+
+.container-grain{
+    width: 97%;
+    // background-color: var(--color-grain-1);
+    background-image: url('../../../public/grainy.svg');
+    background-size: cover;
+    border-radius: 15px;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.components {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+.hello-world {
+    display: block;
+    font-style: italic;
+    @include animate-appear();
+    top: 45%;
+}
+
+.hello-name {
+    display: block;
+    color: var(--color-grain-text);
+    line-height: 120%;
+    font-weight: 700;
+    letter-spacing: 0.64px;
+    @include animate-appear();
+}
+
