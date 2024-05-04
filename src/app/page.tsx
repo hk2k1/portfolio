@@ -7,7 +7,6 @@ import "../styles/css/app.scss";
 import HelloName from "@/components/HelloName";
 
 import animation from "../styles/css/animation.module.scss";
-import Grainy from "@/components/Grainy";
 
 export default function Home() {
   return (

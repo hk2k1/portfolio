@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import Header from "@/components/Header";
 
 // const inter = Inter({ subsets: ['latin'] })
 // const gambetta = localFont({ src: '../styles/fonts/WEB/fonts'})
@@ -51,6 +52,7 @@ const gambetta = localFont({
 });
 
 import "./globals.css";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Harsha Portfolio",
@@ -64,7 +66,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${gambetta.className} bg-gray-40`}>{children}</body>
+      <body className={`${gambetta.className} bg-gray-40`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
