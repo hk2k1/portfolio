@@ -2,24 +2,19 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import "../styles/css/app.scss";
+// import "../styles/css/app.scss";
 
 import HelloName from "@/components/HelloName";
 
-import animation from "../styles/css/animation.module.scss";
+import Intro from "@/components/Intro";
+import SectionDivider from "@/components/SectionDivider/Index";
 
 export default function Home() {
   return (
-    <main>
-      <div className="container-main">
-        <div className="wrapper-grain">
-          <div className="container-grain">
-            <div className="components">
-              <HelloName />
-            </div>
-          </div>
-        </div>
-      </div>
+    <main className="flex flex-col items:center px-4">
+      <Intro />
+      <SectionDivider />
+      <HelloName />
       {/* <svg viewBox="0 0 243 243">
         <filter id="noiseFilter">
           <feTurbulence

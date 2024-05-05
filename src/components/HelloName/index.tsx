@@ -47,12 +47,20 @@ export default function HelloName() {
 
   return (
     <div>
-      <div ref={helloWorldRef} className="hello-world">
-        Hello World,
+      <div className="container-main">
+        <div className="wrapper-grain">
+          <div className="container-grain">
+            <div className="components">
+              <div ref={helloWorldRef} className="hello-world">
+                Hello World,
+              </div>
+              <h1 ref={helloNameRef} className="hello-name">
+                I am Harsha
+              </h1>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1 ref={helloNameRef} className="hello-name">
-        I am Harsha
-      </h1>
     </div>
   );
 }
