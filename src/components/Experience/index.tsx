@@ -12,8 +12,9 @@ import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/providers/theme-context";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience", 0.5);
+  const { ref, inView } = useSectionInView("Experience", 0.2);
   const { theme } = useTheme();
+
   return (
     <section
       id="experience"
@@ -23,13 +24,13 @@ export default function Experience() {
       <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline
         lineColor={theme === "light" ? "#9ca3af" : "rgba(255, 255, 255, 0.15)"}
-        animate={true}
+        animate={inView}
       >
         {experiencesData.map((experience, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
-              visible={true}
+              visible={inView}
               contentStyle={{
                 background:
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
