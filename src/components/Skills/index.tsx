@@ -28,7 +28,7 @@ export default function Skills() {
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>Skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <ul className="flex flex-wrap justify-center gap-2 text-base text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
             key={index}
@@ -37,7 +37,7 @@ export default function Skills() {
             whileInView="animate"
             // viewport={{ once: true }}
             custom={index} // pass index into the variant
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-whiet/10 dark:text-white/80"
+            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
           >
             {skill}
           </motion.li>

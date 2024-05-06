@@ -26,7 +26,7 @@ export default function Contact() {
       <p>
         Please contat me directly at{" "}
         <a className="underline" href="mailto:m.harshakeerthan@gmail.com">
-          harshakeerthan12@gmail.com
+          m.harshakeerthan@gmail.com
         </a>{" "}
         or use the form below.
       </p>
@@ -46,7 +46,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-90 transition-all dark:outline-none"
           type="email"
           name="senderEmail"
           required={true}

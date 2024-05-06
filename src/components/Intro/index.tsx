@@ -58,14 +58,14 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="text-2xl font-bold">Hi, I&apos;m Harsha</span>
-        <span className="block text-lg font-medium text-gray-500">
+        <span className="block text-lg font-medium text-gray-500 dark:text-white/50">
           {" "}
-          Open to full-time opportunities{" "}
+          Open to Full-Time opportunities{" "}
         </span>
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -78,24 +78,25 @@ export default function Intro() {
           }}
         >
           Contact Me
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition-" />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          className="group bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack dark:bg-white/10 "
           href="/Harsha_Resume.pdf"
+          download={true}
         >
           Download Resume{""}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a
-          className="bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack"
+          className="bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/harsha-keerthan/"
           target="_blank"
         >
           <BsLinkedin className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a
-          className="bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack"
+          className="bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/hk2k1"
           target="_blank"
         >
