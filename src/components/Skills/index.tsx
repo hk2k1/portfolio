@@ -35,7 +35,7 @@ export default function Skills() {
             variants={fadeInAnimationsVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             custom={index} // pass index into the variant
             className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
           >
