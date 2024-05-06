@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Header from "@/components/Header";
-import Intro from "@/components/Intro";
-
+import "./globals.css";
+import { Toaster } from "react-hot-toast";
 // const inter = Inter({ subsets: ['latin'] })
 // const gambetta = localFont({ src: '../styles/fonts/WEB/fonts'})
 const gambetta = localFont({
@@ -53,6 +53,7 @@ const gambetta = localFont({
 });
 
 import "./globals.css";
+import ActiveSectionContextProvider from "@/providers/active-section-context";
 
 export const metadata: Metadata = {
   title: "Harsha Portfolio",
@@ -65,12 +66,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body
-        className={`${gambetta.className} bg-gray-40 relative h-[5000px] pt-28`}
+        className={`${gambetta.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <Header />
-        {children}
+        <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
+        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+          <div>
+            <Toaster position="bottom-center" reverseOrder={false} />
+          </div>
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );
