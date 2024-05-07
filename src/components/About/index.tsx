@@ -10,7 +10,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[60rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -35,16 +35,49 @@ export default function About() {
         developer.
       </p> */}
       <p className="mb-4">
-        <span className="italic mb-4">I am him</span>{" "}
+        <span className="font-medium">Enthusiastic</span>{" "}
+        <span className="italic mb-4">Computer Engineering graduate</span>{" "}
+        <span className="font-medium">with a passion to grow and learn.</span>
       </p>
-      <p>
-        <span className="font-medium">I built this shit, </span>{" "}
-        <span className="font-bold">ME!</span>{" "}
-        <span>
-          {" "}
-          Brick by brick, and I be damned if I let you tear it down just coz you
-          don&apos;t like the way another nigga talk.
+      <p className="mb-4">
+        <span className="font-medium">
+          Driven by my curiosity, I chose my undergraduate in Computer
+          Engineering to learn and explore both worlds of software and hardware.
+        </span>{" "}
+        <span className="font-medium">
+          With the varied skills acquired throughout my work experience, I
+          deepened my understanding and experience in various industries.
         </span>
+      </p>
+      {/* <p className="mb-2">
+        <span className="font-medium">
+          As an{" "}
+          <span className="font-semibold">
+            Embedded Systems intern at Continental Automotive
+          </span>
+          , I contributed to refining a project that detects driver movements
+          using sensors and firmware, enhancing software performance by{" "}
+          <span className="italic">40%</span>. The project received approval for
+          industry-wide release.
+        </span>
+      </p> */}
+      {/* <p className=" mb-4">
+        <span className="font-medium">
+          As a{" "}
+          <span className="font-semibold">
+            Full Stack Software Intern at MediaTek
+          </span>
+          , I enhanced engineering workflows by developing user-friendly
+          interfaces and automation tools within a software team thats focused
+          on a traditionally hardware industry.
+        </span>{" "}
+      </p> */}
+      <p>
+        <span className="font-medium">
+          Eager to apply my technical skills in a dynamic environment, I am
+          currently seeking a full-time position as a{" "}
+        </span>{" "}
+        <span className="font-bold">Software Developer</span>.
       </p>
     </motion.section>
   );

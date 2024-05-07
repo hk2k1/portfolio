@@ -27,13 +27,13 @@ export default function Intro() {
             transition={{ type: "tween", duration: 0.2 }}
           >
             <Image
-              src="/raj.webp"
+              src="/IMG_6418.jpg"
               alt="Harsha"
               width={100}
               height={100}
               quality={95}
               priority={true}
-              className="h-24 w-24 rounded-full border-[0.34rem] border-white shadow-xl"
+              className="h-32 w-32 rounded-full border-[0.34rem] border-white shadow-xl"
             />
           </motion.div>
           <motion.span

@@ -59,8 +59,16 @@ import ThemeSwitchButton from "@/components/ThemeSwitchButton";
 import ThemeContextProvider from "@/providers/theme-context";
 
 export const metadata: Metadata = {
-  title: "Harsha Portfolio",
-  description: "Personal Website of a university student",
+  title: {
+    default: "Harsha Keerthan Portfolio",
+    template: "%s | Harsha Keerthan Portfolio",
+  },
+  description:
+    "Harsha Keerthan, Singapore Institute of Technology, Portfolio Website ",
+  openGraph: {
+    title: "Harsha's Portfolio",
+    description: "Harsha Keerthan's Portfolio Website",
+  },
 };
 
 export default function RootLayout({

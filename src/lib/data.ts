@@ -2,15 +2,11 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "../../public/corpcomment.png";
-import rmtdevImg from "../../public/rmtdev.png";
-import wordanalyticsImg from "../../public/Word.png";
 import PoptradeImg from "../../public/Poptrade.png";
 import MoviestopImg from "../../public/Moviestop33.jpeg";
 import DataImg from "../../public/Plotly.png";
 import PortfolioImg from "../../public/Portfolio.png";
 import SitatlasImg from "../../public/sitatlaswebsite.png";
-import PlaceholderImg from "../../public/Placeholder.svg";
 import TransportImg from "../../public/transport.png";
 
 export const links = [
