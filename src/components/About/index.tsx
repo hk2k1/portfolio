@@ -41,8 +41,8 @@ export default function About() {
       </p>
       <p className="mb-4">
         <span className="font-medium">
-          Driven by my curiosity, I chose my undergraduate in Computer
-          Engineering to learn and explore both worlds of software and hardware.
+          Driven by curiosity, I chose my undergraduate in Computer Engineering
+          to learn and explore both worlds of software and hardware.
         </span>{" "}
         <span className="font-medium">
           With the varied skills acquired throughout my work experience, I
