@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -8,21 +8,11 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/providers/active-section-context";
-import { UsermavenClient, usermavenClient } from "@usermaven/sdk-js";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.3);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-  const usermaven: UsermavenClient = usermavenClient({
-    tracking_host: "https://portfolio-harshakeerthan.vercel.app/",
-    key: "UM0CdCbM84",
-  });
-
-  // Track page views called on each page load and on each route change
-  const handleLinkClick = (platform: string) => {
-    usermaven.track("external_link_click", { platform });
-  };
   return (
     <section
       ref={ref}
@@ -94,7 +84,6 @@ export default function Intro() {
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack dark:bg-white/10 "
           href="/Harsha_Resume.pdf"
           download={true}
-          onClick={() => handleLinkClick("resume")}
         >
           Download Resume{""}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
@@ -103,7 +92,6 @@ export default function Intro() {
           className="bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/harsha-keerthan/"
           target="_blank"
-          onClick={() => handleLinkClick("linkedin")}
         >
           <BsLinkedin className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
@@ -111,7 +99,6 @@ export default function Intro() {
           className="bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/hk2k1"
           target="_blank"
-          onClick={() => handleLinkClick("github")}
         >
           <FaGithubSquare className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
