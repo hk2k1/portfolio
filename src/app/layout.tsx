@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Header from "@/components/Header";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 // const inter = Inter({ subsets: ['latin'] })
 // const gambetta = localFont({ src: '../styles/fonts/WEB/fonts'})
 const gambetta = localFont({
@@ -98,6 +99,11 @@ export default function RootLayout({
             <ThemeSwitchButton />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="2ec4d13f-0c1d-4e4b-8058-47281381a801"
+        ></Script>
       </body>
     </html>
   );
