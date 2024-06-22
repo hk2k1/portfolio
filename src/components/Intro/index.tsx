@@ -84,6 +84,7 @@ export default function Intro() {
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack dark:bg-white/10 "
           href="/Harsha_Resume.pdf"
           download={true}
+          data-umami-event="Resume Downloaded"
         >
           Download Resume{""}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
@@ -92,6 +93,7 @@ export default function Intro() {
           className="bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/harsha-keerthan/"
           target="_blank"
+          data-umami-event="Social LinkedIn"
         >
           <BsLinkedin className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
@@ -99,6 +101,7 @@ export default function Intro() {
           className="bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/hk2k1"
           target="_blank"
+          data-umami-event="Social GitHub"
         >
           <FaGithubSquare className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
