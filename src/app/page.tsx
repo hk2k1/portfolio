@@ -27,11 +27,16 @@ export default function Home() {
         }
       }
     };
-    // Add the event listener for window load
-    window.addEventListener("load", handleLoad);
+    // Check if the document is already loaded
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      // Add the event listener for window load if not already loaded
+      window.addEventListener("load", handleLoad);
 
-    // Clean up the event listener on component unmount
-    return () => window.removeEventListener("load", handleLoad);
+      // Clean up the event listener on component unmount
+      return () => window.removeEventListener("load", handleLoad);
+    }
   }, []);
 
   return (
