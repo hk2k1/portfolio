@@ -125,15 +125,32 @@ export const projectsData = [
   {
     title: "SITAtlas",
     description:
-      "Developed a web-based map to address Singapore Institute of Technology's new campus challenges.",
-    tags: ["NextJS", "PayloadCMS", "MongoDB", "Mapbox", "SCSS"],
+      "Developed a web-based map to address Singapore Institute of Technology's new campus challenges integrated with an OpenAI Chatbot using GPT-4o model.",
+    tags: [
+      "NextJS",
+      "PayloadCMS",
+      "MongoDB",
+      "Mapbox",
+      "SCSS",
+      "GraphQL",
+      "NGINX",
+      "Docker",
+      "DigitalOcean",
+    ],
     imageUrl: SitatlasImg,
   },
   {
     title: "Portfolio Website",
     description:
       "A portfolio website developed using Next.js, Tailwind CSS, and Framer Motion.",
-    tags: ["NextJS", "TailwindCSS", "Framer Motion"],
+    tags: [
+      "NextJS",
+      "TailwindCSS",
+      "Framer Motion",
+      "Vercel",
+      "Resend",
+      "Umami Analytics",
+    ],
     imageUrl: PortfolioImg,
   },
 ] as const;
@@ -159,7 +176,9 @@ export const skillsData = [
   "Drupal",
   "Git",
   "Docker",
+  "NGINX",
   "Linux",
   "Python",
+  "Plotly",
   "C++",
 ] as const;
