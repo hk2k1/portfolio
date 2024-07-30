@@ -13,18 +13,25 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    // Log the full URL when the component mounts
-    console.log("Current URL:", window.location.href);
+    const handleLoad = () => {
+      // Log the full URL when the component mounts
+      console.log("Current URL:", window.location.href);
 
-    // Check if the URL contains the hash '#resume'
-    if (window.location.hash === "#resume") {
-      // Track the event with umami
-      try {
-        window.umami.track("Referred From Resume");
-      } catch (err) {
-        console.log(err);
+      // Check if the URL contains the hash '#resume'
+      if (window.location.hash === "##resume") {
+        // Track the event with umami
+        try {
+          window.umami.track("Referred From Resume");
+        } catch (err) {
+          console.log(err);
+        }
       }
-    }
+    };
+    // Add the event listener for window load
+    window.addEventListener("load", handleLoad);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   return (
