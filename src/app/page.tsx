@@ -9,8 +9,24 @@ import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import SectionDivider from "@/components/SectionDivider/Index";
 import Skills from "@/components/Skills";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    // Log the full URL when the component mounts
+    console.log("Current URL:", window.location.href);
+
+    // Check if the URL contains the hash '#resume'
+    if (window.location.hash === "#resume") {
+      // Track the event with umami
+      try {
+        umami.track("Referred From Resume");
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }, []);
+
   return (
     <main className="flex flex-col items-center px-4">
       <Intro />
