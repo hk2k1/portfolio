@@ -20,7 +20,7 @@ export default function Home() {
     if (window.location.hash === "#resume") {
       // Track the event with umami
       try {
-        umami.track("Referred From Resume");
+        window.umami.track("Referred From Resume");
       } catch (err) {
         console.log(err);
       }
