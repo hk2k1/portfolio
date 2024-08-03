@@ -4,43 +4,67 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import HelloName from "@/components/HelloName";
-
+import { headers } from "next/headers";
 import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import SectionDivider from "@/components/SectionDivider/Index";
 import Skills from "@/components/Skills";
 import { useEffect } from "react";
 
-export default function Home() {
+const UmamiTracker = () => {
   useEffect(() => {
-    const handleLoad = () => {
-      // Log the full URL when the component mounts
-      console.log("Current URL:", window.location.href);
+    const trackIP = async () => {
+      try {
+        const response = await fetch("/api/trackip");
+        const data = await response.json();
+        // console.log("Visitor IP:", data.ip);
 
-      // Check if the URL contains the hash '#resume'
-      if (window.location.hash === "##resume") {
-        // Track the event with umami
-        try {
-          window.umami.track("Referred From Resume");
-        } catch (err) {
-          console.log(err);
+        if (window.location.hash === "##resume") {
+          const payload = {
+            hostname: "portfolio-harshakeerthan.vercel.app",
+            language: "en-US",
+            referrer: "https://harshakeerthan.com/##resume",
+            screen: "1920x1080",
+            title: "portfolio",
+            url: "/##resume",
+            website: "2ec4d13f-0c1d-4e4b-8058-47281381a801",
+            name: "RESUME_REFERENCE",
+            data: { ip: data.ip },
+          };
+          const API_KEY = process.env.UMAMI_API_KEY;
+
+          const umamiResponse = await fetch("https://eu.umami.is/api/send", {
+            mode: "no-cors",
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + API_KEY,
+            },
+            body: JSON.stringify({
+              type: "event",
+              payload,
+            }),
+          });
+          // if (!umamiResponse.ok) {
+          //   throw new Error("Network response was not ok", error);
+          // }
+          // console.log("Event tracked successfully");
         }
+      } catch (error) {
+        console.error("Error tracking event:", error);
       }
     };
-    // Check if the document is already loaded
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      // Add the event listener for window load if not already loaded
-      window.addEventListener("load", handleLoad);
 
-      // Clean up the event listener on component unmount
-      return () => window.removeEventListener("load", handleLoad);
-    }
+    trackIP();
   }, []);
 
+  return null;
+};
+
+export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
+      <UmamiTracker />
       <Intro />
       <SectionDivider />
       <About />
