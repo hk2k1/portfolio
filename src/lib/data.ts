@@ -68,10 +68,10 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Embedded Software Intern",
+    title: "Software Engineer Intern",
     company: "Continental Automotive",
     description:
-      "Engineered UART interfaces in python to execute sensor-firmware communication.",
+      "Engineered UART interfaces in python to execute communication between various systems.",
     date: "May 2021 - Aug 2021",
     icon: React.createElement(CgWorkAlt),
   },
