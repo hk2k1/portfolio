@@ -8,6 +8,7 @@ import DataImg from "../../public/Plotly.png";
 import PortfolioImg from "../../public/Portfolio.png";
 import SitatlasImg from "../../public/sitatlaswebsite.png";
 import TransportImg from "../../public/transport.png";
+import FlightImg from "../../public/FlightLogger.png";
 
 export const links = [
   {
@@ -152,6 +153,24 @@ export const projectsData = [
       "Umami Analytics",
     ],
     imageUrl: PortfolioImg,
+  },
+  {
+    title: "FlightLogger",
+    description:
+      "Flight log management system with NextAuth for OAuth, implementing role-based access control, leveraging Next.js server actions.",
+    tags: [
+      "Next.js 14",
+      "React",
+      "MongoDB",
+      "NextAuth.js",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "TypeScript",
+      "Zod",
+      "Resend",
+      "Vercel",
+    ],
+    imageUrl: FlightImg,
   },
 ] as const;
 
